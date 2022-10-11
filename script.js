@@ -54,18 +54,14 @@
 
 
 // Rest Operators
-let arr = [1,2,3,4,5];
-const arrTest = [...arr] = arr;
-let total = 0; 
+// let arr = [1,2,3,4,5];
+// const arrTest = [...arr] = arr;
+// let total = 0; 
 
-for (const arrs of arrTest){ 
-    total += arrs;
-    console.log(total);
-
-}
-
-
-
+// for (const arrs of arrTest){ 
+//     total += arrs;
+//     console.log(total);
+// }
 
 // function add(...nums){
 //     let total = 0;
@@ -75,3 +71,20 @@ for (const arrs of arrTest){
 //     console.log(total);
 // }
 // add(2,12,32,12,23);
+
+//Arrow Function
+
+// function add(...num){
+//     let total = num.reduce((x,y) => x + y);
+//     console.log(total)
+// }
+// add(1,2,3,4,5)
+
+// Reduce 
+
+// const num = [1,2,3,4,5];
+
+// num.reduce((total, nums) => {
+//     return totalNum = total + nums
+// }, 0);
+// console.log(totalNum);
