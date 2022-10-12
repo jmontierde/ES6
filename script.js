@@ -88,3 +88,54 @@
 //     return totalNum = total + nums
 // }, 0);
 // console.log(totalNum);
+
+// For Each
+// function add(numArray = [1,2,3,4,5]){
+//     let total = 0;
+//     numArray.forEach(element => {
+//         total += element;
+//     });
+//     console.log(total);
+// }
+// add();
+
+//Include
+// const numArray = [1,2,3,4,5]; //It returns boolean true or false;
+// console.log(numArray.includes(1));
+
+// Let and Const 
+// if(false){
+//     let example = 5;
+// }
+// console.log(example);
+// const example = []; // You can add value using push in const 
+// example.push(5); // We can modify array and object but it cannot override it.
+// console.log(example);
+
+
+//Import and Export
+// export const data = [1,2,3,4,5]; // add type = 'module' when you're importing
+
+// padStart() and padEnd()
+
+// const sbmt = document.getElementById('sbmt');
+// sbmt.addEventListener('click', function() { 
+
+// })
+function countChar(){
+    let lengths = document.querySelector('.length')
+    let output = document.querySelector('.output');
+    let countChar = document.getElementById('countChar').value;
+  
+
+    for(let i = 0; i < countChar.length; i++){
+        output.textContent = countChar;
+        lengths.textContent = countChar.length;
+    }
+}
+countChar();
+
+
+
+// let example = 'Dylan';
+// console.log(example.padStart(10, 'Hi'));
