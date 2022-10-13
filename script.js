@@ -52,8 +52,41 @@
 // example2.pop();
 // console.log(example2);
 
+// Restructuring
+// let names = 'Everest';
+// let height = 8848;
+// let output  = function(){
+//     console.log(`Mt. ${this.names} is ${this.height} meter tall`);
+// }
 
-// Rest Operators
+// let adventureClimbing = {names, height,output};
+// adventureClimbing.output();
+
+
+// let adventureClimbing = {
+//     names: 'Everest',
+//     height: 8848,
+//     output(){
+//         console.log(`Mt. ${this.names} is ${this.height} meter tall`);
+//     }
+// };
+// adventureClimbing.output();
+
+// Spread and Rest Operators
+// let day = { 
+//     breakfast: 'toast with milk',
+//     lunch: 'Adobo'
+// } 
+// let night = { 
+//     dinner: 'Noodles'
+// }
+
+// const food = {...day, ...night}; // Produce a new object
+// console.log(food);
+// Rest
+// let rivers = ['Sunkoshi', 'Tamakoshi', 'Saptakoshi'];
+// let [first, ...rest] = rivers;
+// console.log(rest);
 // let arr = [1,2,3,4,5];
 // const arrTest = [...arr] = arr;
 // let total = 0; 
@@ -118,24 +151,115 @@
 
 // padStart() and padEnd()
 
-// const sbmt = document.getElementById('sbmt');
-// sbmt.addEventListener('click', function() { 
-
-// })
-function countChar(){
-    let lengths = document.querySelector('.length')
-    let output = document.querySelector('.output');
-    let countChar = document.getElementById('countChar').value;
-  
-
-    for(let i = 0; i < countChar.length; i++){
-        output.textContent = countChar;
-        lengths.textContent = countChar.length;
-    }
-}
-countChar();
-
-
+// let example = 'Dylan';
+// console.log(example.padStart(10, 'Hi')); //It will add from the beginning of the string
 
 // let example = 'Dylan';
-// console.log(example.padStart(10, 'Hi'));
+// console.log(example.padEnd(10, 'Hi')); //It will add from the end of the string
+
+// let countChar = document.getElementById('countChar');
+// countChar.addEventListener('keyup', function(e){
+//     e.preventDefault();
+//     let count = document.getElementById('count');
+//     count.textContent = `Character Count: ${countChar.value.length}`;
+// })
+// Challenge padStart() and padEnd()
+// let example = 'https://www.youtube.com/watch?v=nZ1DMMsyVyI&t=2180s';
+// console.log(example.padStart(100));
+// console.log(example.padEnd(1));
+
+// Classes
+// export class Animal { 
+//     constructor(type, legs){
+//         this.type = type;
+//         this.legs = legs;
+//     }
+//     makeNoise(sound = "Loud"){
+//         console.log(sound);
+//     }
+//     get metaData(){
+//         return `Type: ${this.type} Legs: ${this.legs}`
+//     }
+
+//     static return10(){ // static is you don't need to instantiate to call it
+//         return 10;
+//     }
+// }
+
+// export class Cat extends Animal { 
+//     // constructor(type, legs, tail){
+//     //     super(type,legs);
+//     //     this.tail = tail;
+//     // }
+//     makeNoise(sound = 'meow'){
+//         console.log(sound);
+//     }
+// }
+
+
+// Trailing Commas // Not required to use
+// function add(para1,){
+//     const example = {
+//         name: 'jayson',
+//     };
+//     console.log(example);
+// }
+// add();
+
+// Async & Await
+// const apiURL = 'https://jsonplaceholder.typicode.com/todos/1';
+
+// function getURL(){
+//     return new Promise(res => {
+//         setTimeout(() => {
+//             res(apiURL);
+//         }, 3000);
+//     });
+// }
+// getURL().then((data) => {
+//     console.log(data);
+// });
+
+// async function getURL(){
+//     const res = await fetch(apiURL);
+//     const data = await res.json();
+//     console.log(data);
+// }
+
+// let fetchPromise ='https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/products.json';
+
+// function getApi(){
+//     fetch(fetchPromise)
+//     .then((res) => res.json())
+//     .then((data) => {
+//         data.forEach(test => {
+//             console.log(test.name);
+//         });
+//     })
+// }
+// getApi()
+
+// Sets
+// const example = new Set([1,1,1,1,2,2,2,2,4]);
+// example.add(5);
+// example.add(5).add(17);
+// console.log(example.delete(5));
+
+// console.log(example);
+
+
+// this keyword
+let mount = {
+    mountains: ['Everest', 'Apo', 'Mayon'],
+    // add method
+    printWithDash: function(){
+        //console.log('inside printWithDasht' + globalThis);
+
+        setTimeout(() => {
+            console.log(this.mountains.join(" + "))
+            //console.log('inside setTimeout' + this);
+        }, 3000)
+    }
+}
+mount.printWithDash();
+// console.log(globalThis); // It refers to Window object 
