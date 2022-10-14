@@ -249,17 +249,28 @@
 
 
 // this keyword
-let mount = {
-    mountains: ['Everest', 'Apo', 'Mayon'],
-    // add method
-    printWithDash: function(){
-        //console.log('inside printWithDasht' + globalThis);
+// let mount = {
+//     mountains: ['Everest', 'Apo', 'Mayon'],
+//     // add method
+//     printWithDash: function(){
+//         //console.log('inside printWithDasht' + globalThis);
 
-        setTimeout(() => {
-            console.log(this.mountains.join(" + "))
-            //console.log('inside setTimeout' + this);
-        }, 3000)
-    }
-}
-mount.printWithDash();
-// console.log(globalThis); // It refers to Window object 
+//         setTimeout(() => {
+//             console.log(this.mountains.join(" + "))
+//             //console.log('inside setTimeout' + this);
+//         }, 3000)
+//     }
+// }
+// mount.printWithDash();
+// // console.log(globalThis); // It refers to Window object 
+
+// Classes constructor super
+// function Holiday(destination, days){ 
+//     this.destination = destination;
+//     this.days = days;
+// }
+// Holiday.prototype.info = function() { 
+//     console.log(this.destination + '|' + this.days + 'days');
+// }
+// let freeDay = new Holiday("Nepal", 18);
+// console.log(freeDay.info());
